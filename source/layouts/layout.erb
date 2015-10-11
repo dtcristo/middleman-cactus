@@ -1,27 +1,16 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
-	<link rel="stylesheet" href="{% static '/css/style.css' %}">
-
-	{% block header %}
-		<title>Profile</title>
-	{% endblock header %}
-</head>
-
-<body>
-	{% block content %}
-		Main content
-	{% endblock content %}
-
-	{% block scripts %}
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="{% static '/js/main.js' %}"></script>
-		<script src="{% static '/js/retina.js' %}"></script>
-	{% endblock scripts %}
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: 'Atom Feed' %>
+    <%= favicon_tag 'images/favicon.ico' %>
+    <%= stylesheet_link_tag 'application' %>
+    <title><%= page_title %></title>
+  </head>
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+  </body>
 </html>
