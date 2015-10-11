@@ -1,24 +1,20 @@
----
-pageable: true
-per_page: 10
----
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+{% extends "base.html" %}
+{% block content %}
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+	<a id="docs" href="http://cactusformac.com/redirect/#documentation">Documentation</a>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
+	<section id="wrapper">
+		<header id="header">
+			<img id="avatar" class="2x" src="{% static '/images/avatar.jpg' %}"/>
+			<h1>{% block title %}Profile{% endblock title %}</h1>
+			<h2>Small personal page.</h2>
+		</header>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+		<p>The profile starting point is a small personal landing page. It displays your avatar and generates a snippet of text, suitable for a description or personal information.</p>
+	</section>
+
+	<a href="http://cactusformac.com/?utm_source=templates&utm_medium=badge&utm_campaign=profile-template">
+		<img id="badge" class="2x" src="{% static '/images/badge.png' %}"/>
+	</a>
+
+{% endblock content %}
