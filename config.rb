@@ -63,14 +63,18 @@ set :trailing_slash, false
 #   end
 # end
 
+###
+# Site Settings
+###
+set :site_url, 'http://blog.url.com/'
+set :site_title, 'Blog title'
+set :site_description, 'Blog description'
+set :site_author, 'Blog author'
+
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
-
 set :layouts_dir, 'layouts'
-
 set :partials_dir, 'partials'
 
 # Build-specific configuration
