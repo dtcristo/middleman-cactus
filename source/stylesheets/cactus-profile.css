@@ -54,15 +54,6 @@ body {
   z-index: 100;
 }
 
-/* Made with Cactus Badge */
-#badge {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  height: 48px;
-  width: 48px;
-}
-
 /* Type */
 /* Accent color */
 a {
