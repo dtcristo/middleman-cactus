@@ -71,11 +71,16 @@ set :site_title, 'Blog title'
 set :site_description, 'Blog description'
 set :site_author, 'Blog author'
 
+# Asset directories
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :layouts_dir, 'layouts'
 set :partials_dir, 'partials'
+
+# Markdown settings
+#set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true
+#set :markdown_engine, :redcarpet
 
 # Build-specific configuration
 configure :build do
