@@ -5,5 +5,8 @@ source 'http://rubygems.org'
 gem 'middleman', '~> 3.4.0'
 gem 'middleman-blog', '~> 3.5.3'
 
-# For feed.xml.builder
+# For feed.xml.builder/sitemap.xml.builder
 gem 'builder', '~> 3.0'
+
+# For markdown
+gem 'redcarpet'
