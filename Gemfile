@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 
 gem 'middleman', '~> 3.4.0'
 gem 'middleman-blog', '~> 3.5.3'
+gem 'middleman-syntax'
 
 # For feed.xml.builder/sitemap.xml.builder
 gem 'builder', '~> 3.0'

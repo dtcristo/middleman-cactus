@@ -1,16 +1,32 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: 'Atom Feed' %>
-    <%= favicon_tag 'images/favicon.ico' %>
-    <%= stylesheet_link_tag 'application' %>
+    <%= feed_tag :atom, 'feed.xml', title: 'Atom Feed' %>
+    <%= favicon_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag 'all' %>
     <title><%= page_title %></title>
   </head>
   <body>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
+
+    <% if current_article %>
+      <nav class="main-nav">
+        <a href="/"><span class="arrow">←</span> Home</a>
+      </nav>
+    <% else %>
+      <%= partial 'profile' %>
+    <% end %>
+
+    <section id="wrapper" <% unless current_article %>class="home"<% end %>>
+      <%= yield %>
+      <footer id="footer">
+        <p class="small">© <%= Time.now.year %> <%= site_author %></p>
+      </footer>
+    </section>
+
+    <%= javascript_include_tag 'all' %>
+    <%= partial 'google_analytics' %>
   </body>
 </html>
