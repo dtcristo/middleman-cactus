@@ -4,7 +4,7 @@ A port of the default theme from [Cactus](https://cactusformac.com/) for the [Mi
 
 ## Installation
 
-Install middleman:
+Install Middleman:
 
     $ gem install middleman
 
@@ -30,12 +30,10 @@ set :disqus_shortname, 'example'
 set :google_analytics, 'XX-XXXXXXXX-X'
 ```
 
-Start the middleman server:
+Start the Middleman server:
 
     $ middleman server
 
 Site should be live at [http://localhost:4567](http://localhost:4567).
 
-## Todo
-
-* Add pagination
+For more information read the [middleman-blog](https://middlemanapp.com/basics/blogging/) documentation.
