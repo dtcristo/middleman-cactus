@@ -42,8 +42,8 @@ activate :blog do |blog|
   # blog.calendar_template = 'calendar.html'
 
   # Enable pagination
-  blog.paginate = true
-  blog.per_page = 5
+  # blog.paginate = true
+  # blog.per_page = 5
   # blog.page_link = 'page/{num}'
 end
 
@@ -66,10 +66,14 @@ set :trailing_slash, false
 ###
 # Site Settings
 ###
-set :site_url, 'http://blog.url.com/'
-set :site_title, 'Blog title'
-set :site_description, 'Blog description'
-set :site_author, 'Blog author'
+set :site_url, 'http://example.com/'
+set :site_title, 'Site Title'
+set :site_subtitle, 'This is the site subtitle'
+set :profile_text, %q(Pitchfork kogi forage, gluten-free pour-over drinking vinegar Etsy narwhal next level shabby chic bicycle rights tofu mustache scenester. Intelligentsia Brooklyn mumblecore, church-key meggings cardigan quinoa gluten-free banjo. Polaroid beard 8-bit, lumbersexual photo booth forage bitters mustache drinking vinegar biodiesel cardigan. Four loko raw denim polaroid selfies, mixtape skateboard lumbersexual. Odd Future Blue Bottle bicycle rights Etsy. Etsy Odd Future normcore, deep v Shoreditch seitan sustainable yr heirloom Brooklyn try-hard stumptown Bushwick cornhole. Portland chillwave pug Tumblr deep v readymade.)
+set :site_author, 'Site Author'
+set :twitter_username, 'example'
+set :disqus_shortname, 'example'
+set :google_analytics, 'XX-XXXXXXXX-X'
 
 # Asset directories
 set :css_dir, 'stylesheets'
@@ -77,16 +81,18 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :layouts_dir, 'layouts'
 set :partials_dir, 'partials'
+set :helpers_dir, 'helpers'
 
-# Markdown settings
-#set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true
-#set :markdown_engine, :redcarpet
+# Markdown and syntax highlighting
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end
