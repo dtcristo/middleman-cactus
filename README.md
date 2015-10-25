@@ -34,6 +34,6 @@ Start the Middleman server:
 
     $ middleman server
 
-Site should be live at [http://localhost:4567](http://localhost:4567).
+Site should be live at [http://localhost:4567/](http://localhost:4567/).
 
 For more information read the [middleman-blog](https://middlemanapp.com/basics/blogging/) documentation.
