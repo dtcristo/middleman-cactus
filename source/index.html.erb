@@ -1,12 +1,15 @@
-<a id="docs" href="http://cactusformac.com/redirect/#documentation">Documentation</a>
-<section id="wrapper">
-  <header id="header">
-    <%= image_tag 'avatar.png', id: 'avatar', class: '2x' %>
-    <h1>Profile</h1>
-    <h2>Small personal page.</h2>
-  </header>
-  <p>The profile starting point is a small personal landing page. It displays your avatar and generates a snippet of text, suitable for a description or personal information.</p>
-</section>
-<a href="http://cactusformac.com/?utm_source=templates&utm_medium=badge&utm_campaign=profile-template">
-  <%= image_tag 'badge.png', id: 'badge', class: '2x' %>
-</a>
+---
+sitemap_priority: 1.0
+---
+
+<ul id="post-list">
+  <% blog.articles.each do |article| %>
+    <li>
+      <aside class="dates"><%= article.date.strftime('%e %B %Y') %></aside></a>
+      <a href="<%= article.url %>">
+        <%= article.title %>
+        <!-- <h2><%#= article.summary %></h2> -->
+      </a>
+    </li>
+  <% end %>
+</ul>

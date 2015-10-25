@@ -1,0 +1,26 @@
+<% wrap_layout :layout do %>
+  <article class="post">
+    <header>
+      <h1><%= current_article.title %></h1>
+      <h2 class="headline"><%= current_article.date.strftime('%e %B %Y') %></h2>
+    </header>
+    <section id="post-body">
+      <%= yield %>
+    </section>
+  </article>
+
+  <footer id="post-meta" class="clearfix">
+    <a href="/">
+      <img class="avatar" src="/images/avatar.png">
+      <div>
+        <span class="dark"><%= site_author %></span>
+        <span><%= site_subtitle %></span>
+      </div>
+    </a>
+    <%= partial 'sharing' %>
+  </footer>
+
+  <div class="archive readmore">
+    <%= partial 'disqus' %>
+  </div>
+<% end %>
