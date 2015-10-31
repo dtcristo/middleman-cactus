@@ -68,12 +68,11 @@ h2 {
 
 .profile h2 {
   font-size: 20px;
-    font-weight: 300;
-    color: #aaa;
-    margin-top: 10px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-style: normal;
-
+  font-weight: 300;
+  color: #aaa;
+  margin-top: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
 }
 
 nav.main-nav {
