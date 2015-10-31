@@ -51,29 +51,20 @@ body {
 
 nav.main-nav {
   padding: 20px 20px 0;
-  /*max-width: 600px;*/
-  /*width:100%;*/
   background: #fff;
   background: rgba(255,255,255,.90);
   margin: 0 auto;
   text-align: left;
-  /*position: fixed;*/
   z-index: 100;
 }
 
 nav.main-nav a {
-  top: 8px;
-  right: 6px;
   padding: 8px 12px;
-  color: #5badf0;
-  font-size: 13px;
-  /*font-weight: bold;*/
-  line-height: 1.35;
   border-radius: 3px;
 }
 
 nav.main-nav a.cta {
-  background: #5badf0;
+  background: #5694f1;
   color: #fff;
   margin-left: 12px;
 }
@@ -96,7 +87,6 @@ a,
 #post-list li:hover .dates,
 #title:hover {
   text-decoration: none;
-  color: #5badf0;
   color: #5694f1;
 }
 
@@ -265,7 +255,7 @@ img {
 Post List
 =========================================== */
 #post-list,#archive-list {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 #post-list li,#archive-list li {
@@ -295,12 +285,6 @@ Post List
   color: #bbb;
 }
 
-#post-list-footer {
-  border-top: 1px solid #eee;
-  margin-top: 20px;
-  padding-top: 100px;
-}
-
 #archive-link {
   display: inline-block;
   font-size: 13px;
@@ -325,7 +309,7 @@ Post List
 #footer {
   box-shadow: inset 0 1px 0 #eee;
   padding: 40px 0 0 0;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 /* Post Page */
@@ -338,32 +322,40 @@ Post List
 }
 
 #post-meta {
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
+  /*font-weight: bold;*/
   line-height: 1.4;
   border-top: 1px solid #eee;
   padding-top: 40px;
   margin-bottom: 40px;
   padding-bottom: 40px;
   margin-top: 40px;
-  color:#444;
+  /*color:#444;*/
   border-bottom: 1px solid #eee;
 }
 
 #post-meta div span {
-  color: #aaa;
-  font-weight: 500;
+  color: #bbb;
   display: block;
 }
 
 #post-meta div span.dark {
-  color: #1E2025;
-
+  color: #333;
+  font-weight: bold;
 }
 
 #post-meta div {
   margin: 0 25px 0 0;
   float: left;
+}
+
+#post-meta img.avatar {
+  height: 36px;
+  width: 36px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
 #sharing {
@@ -376,18 +368,17 @@ Post List
   font-size: 23px;
   margin-left: 1px;
   margin-top: 4px;
-  color: #d4d4d4;
+  color: #bbb;
   display: inline-block;
   vertical-align: middle;
 }
 
 #sharing a:hover {
-  color: #444;
-  /*opacity: 0.8;*/
+  color: #666;
 }
 
 /* Post Navigation */
-#post-nav {
+/*#post-nav {
   border-top:1px solid #eee;
   text-align:center;
   padding-top:20px;
@@ -432,7 +423,7 @@ Post List
 
 #post-nav span.next:hover {
   right: -3px;
-}
+}*/
 
 /* Archive */
 h1.archive {
@@ -471,16 +462,6 @@ h2.month {
   color: #5694f1;
 }
 
-#post-meta img.avatar {
-  height: 36px;
-  width: 36px;
-  float: left;
-  border-radius: 50%;
-  margin-top: 3px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
-}
-
 #post-list.archive.readmore h3{
   font: 400 20px "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-bottom: 30px;
@@ -512,8 +493,6 @@ h2.month {
 
   #title { font-size: 17px; }
   #post-list .dates { display: none; }
-
-  #post-list-footer { margin-top: 20px; padding-top: 40px; }
 
   h1 { font-size: 26px; }
   .post h1 { font-size: 24px; }
