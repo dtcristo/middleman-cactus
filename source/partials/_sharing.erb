@@ -1,14 +1,13 @@
 <% title = current_article.title %>
 <% url = URI.join(site_url, current_page.url) %>
-<section id="sharing">
+<div class="sharing">
   <a href="https://twitter.com/share?text=<%= title %>&url=<%= url %>&via=<%= twitter_username %>">
     <i class="icon-twitter-squared"></i>
   </a>
   <a href="https://www.facebook.com/sharer/sharer.php?u=<%= url %>">
-    <!-- <span class="icon-facebook-circled"></span> -->
     <i class="icon-facebook-squared"></i>
   </a>
   <a href="mailto:?subject=<%= title %>&body=<%= url %>">
     <i class="icon-mail-squared"></i>
   </a>
-</section>
+</div>
