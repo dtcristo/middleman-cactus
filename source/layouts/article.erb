@@ -9,15 +9,18 @@
     </section>
   </article>
 
-  <footer id="post-meta" class="clearfix">
+  <footer id="post-meta">
     <a href="/">
       <img class="avatar" src="/images/avatar.png">
-      <div>
-        <span class="dark"><%= site_author %></span>
-        <span><%= site_subtitle %></span>
+      <div class="details">
+        <div class="dark"><%= site_author %></div>
+        <div class="light"><%= site_subtitle %></div>
       </div>
     </a>
     <%= partial 'sharing' %>
+    <!-- <a class="" href="/">
+
+    </a> -->
   </footer>
 
   <%= partial 'disqus' %>
