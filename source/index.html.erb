@@ -4,14 +4,17 @@ sitemap_priority: 1.0
 
 <%= partial 'profile' %>
 
-<ul id="post-list">
-  <% blog.articles.each do |article| %>
-    <li>
-      <aside class="dates"><%= article.date.strftime('%e %B %Y') %></aside></a>
-      <a href="<%= article.url %>">
-        <%= article.title %>
-        <!-- <h2><%#= article.summary %></h2> -->
-      </a>
-    </li>
-  <% end %>
-</ul>
+<% if blog.articles.any? %>
+  <ul id="post-list">
+    <% blog.articles.each do |article| %>
+      <li>
+        <a href="<%= article.url %>">
+          <div><%= article.title %></div>
+          <div class="date"><%= article.date.strftime('%e %B %Y') %></div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <hr>
+<% end %>
