@@ -33,11 +33,15 @@ body {
   position: relative;
 }
 
-.profile #avatar {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
+img.avatar {
   border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+}
+
+.profile img.avatar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
   margin-bottom: 20px;
 }
 
@@ -297,12 +301,10 @@ img {
 }
 
 #post-meta img.avatar {
-  height: 36px;
-  width: 36px;
+  height: 48px;
+  width: 48px;
   float: left;
-  border-radius: 50%;
   margin-right: 20px;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
 #sharing {
@@ -328,6 +330,10 @@ img {
 @media screen and (max-width: 460px) {
   #wrapper { padding: 20px 20px 20px 20px; }
   .profile { max-width: 320px; }
+  .profile img.avatar {
+    width: 80px;
+    height: 80px;
+  }
   .post { margin-top: 40px; }
   h1 { font-size: 26px; }
   .post h1 { font-size: 24px; }
