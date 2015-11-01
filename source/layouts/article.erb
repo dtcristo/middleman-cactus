@@ -20,6 +20,8 @@
     <%= partial 'sharing' %>
   </footer>
 
-  <%= partial 'disqus' %>
+  <% if disqus_shortname %>
+    <%= partial 'disqus' %>
+  <% end %>
 
 <% end %>

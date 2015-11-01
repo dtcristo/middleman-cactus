@@ -24,6 +24,9 @@
     </section>
 
     <%= javascript_include_tag 'all' %>
-    <%= partial 'google_analytics' %>
+
+    <% if google_analytics %>
+      <%= partial 'google_analytics' %>
+    <% end %>
   </body>
 </html>
