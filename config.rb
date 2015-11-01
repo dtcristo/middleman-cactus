@@ -71,7 +71,15 @@ set :site_title, 'Site Title'
 set :site_subtitle, 'This is the site subtitle'
 set :profile_text, %q(Pitchfork kogi forage, gluten-free pour-over drinking vinegar Etsy narwhal next level shabby chic bicycle rights tofu mustache scenester. Intelligentsia Brooklyn mumblecore, church-key meggings cardigan quinoa gluten-free banjo. Polaroid beard 8-bit, lumbersexual photo booth forage bitters mustache drinking vinegar biodiesel cardigan. Four loko raw denim polaroid selfies, mixtape skateboard lumbersexual. Odd Future Blue Bottle bicycle rights Etsy. Etsy Odd Future normcore, deep v Shoreditch seitan sustainable yr heirloom Brooklyn try-hard stumptown Bushwick cornhole. Portland chillwave pug Tumblr deep v readymade.)
 set :site_author, 'Site Author'
+
+# Usernames
+set :github_username, 'example'
+set :keybase_username, 'example'
 set :twitter_username, 'example'
+set :linkedin_username, 'example'
+set :lastfm_username, 'example'
+set :spotify_username, 'example'
+
 set :disqus_shortname, 'example'
 set :google_analytics, 'XX-XXXXXXXX-X'
 
