@@ -10,7 +10,7 @@
     <title><%= page_title %></title>
   </head>
   <body>
-    <% if current_article %>
+    <% unless current_page.data.hide_nav %>
       <nav class="main-nav">
         <a href="/"><span class="arrow">←</span> Home</a>
       </nav>
