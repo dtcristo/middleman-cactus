@@ -5,7 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .hidden { display: none; }
 
 /* Spacing */
-.post h1, h2, h3, h4, h5, p, .post-body ul, #post-list li, pre {
+.post h1, h2, h3, h4, h5, p, ul, pre {
   margin-bottom: 20px;
 }
 
@@ -84,8 +84,7 @@ a,
 
 p a { color: #59a6ed; }
 
-ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+ul { padding-left: 2em; }
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
@@ -220,15 +219,14 @@ img {
 
 #post-list {
   border-top: 1px solid #eee;
-  margin-top: 40px;
-  padding-top: 20px;
+  margin: 40px 0 40px 0;
+  padding: 20px 0 20px 0;
   border-bottom: 1px solid #eee;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
 }
 
 #post-list li {
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
 #post-list li:last-child {
