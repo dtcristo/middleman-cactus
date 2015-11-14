@@ -26,10 +26,6 @@ activate :blog do |blog|
   blog.default_extension = '.md'
 end
 
-# Pretty URLs (https://middlemanapp.com/advanced/pretty_urls/)
-activate :directory_indexes
-set :trailing_slash, false
-
 # Markdown and syntax highlighting
 activate :syntax
 set :markdown_engine, :redcarpet
