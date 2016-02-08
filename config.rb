@@ -16,6 +16,21 @@ page '/404.html', directory_index: false
 # Helpers and extensions
 ###
 
+helpers do
+  # Builds a page title from the article title + site title
+  def page_title
+    if current_article && current_article.title
+      current_article.title + ' | ' + config[:site_title]
+    else
+      config[:site_title]
+    end
+  end
+  # Renders component partials
+  def component(path, locals={})
+    partial "components/#{path}", locals
+  end
+end
+
 activate :blog do |blog|
   blog.permalink = '{title}'
   # Matcher for blog source files
@@ -51,9 +66,9 @@ set :disqus_shortname, nil
 # Replace 'nil' with your Google Analytics key, eg. 'XX-XXXXXXXX-X'
 set :google_analytics, nil
 
-# Custom asset directories
-set :partials_dir, 'partials'
-
+###
+# Environment settings
+###
 # Development-specific configuration
 configure :development do
   # Reload the browser automatically whenever files change

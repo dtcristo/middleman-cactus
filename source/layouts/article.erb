@@ -17,11 +17,11 @@
         <div class="light"><%= config[:site_subtitle] %></div>
       </div>
     </a>
-    <%= partial 'sharing' %>
+    <%= component 'sharing' %>
   </footer>
 
   <% if config[:disqus_shortname] %>
-    <%= partial 'disqus' %>
+    <%= component 'disqus' %>
   <% end %>
 
 <% end %>

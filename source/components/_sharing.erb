@@ -1,7 +1,7 @@
 <% title = current_article.title %>
-<% url = URI.join(site_url, current_page.url) %>
+<% url = URI.join(config[:site_url], current_page.url) %>
 <div class="sharing">
-  <a href="https://twitter.com/share?text=<%= title %>&url=<%= url %>&via=<%= twitter_username %>">
+  <a href="https://twitter.com/share?text=<%= title %>&url=<%= url %>&via=<%= config[:twitter_username] %>">
     <i class="icon-twitter-squared"></i>
   </a>
   <a href="https://www.facebook.com/sharer/sharer.php?u=<%= url %>">

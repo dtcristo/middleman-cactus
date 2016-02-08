@@ -1,0 +1,22 @@
+<header class="profile">
+  <img class="avatar" src="/images/avatar.png"/>
+  <h1><%= config[:site_title] %></h1>
+  <h2><%= config[:site_subtitle] %></h2>
+</header>
+<hr>
+<p><%= config[:profile_text] %></p>
+
+<div class="social">
+  <div class="social-left">
+    <a class="social-link" href="https://github.com/<%= config[:github_username] %>"><span class="icon-github"></span> GitHub</a>
+    <a class="social-link" href="https://keybase.io/<%= config[:keybase_username] %>"><span class="icon-key"></span> Keybase</a>
+  </div>
+  <div class="social-center">
+    <a class="social-link" href="https://twitter.com/<%= config[:twitter_username] %>"><span class="icon-twitter"></span> Twitter</a>
+    <a class="social-link" href="https://www.linkedin.com/in/<%= config[:linkedin_username] %>"><span class="icon-linkedin"></span> LinkedIn</a>
+  </div>
+  <div class="social-right">
+    <a class="social-link" href="http://www.last.fm/user/<%= config[:lastfm_username] %>"><span class="icon-lastfm"></span> Last.fm</a>
+    <a class="social-link" href="https://open.spotify.com/user/<%= config[:spotify_username] %>"><span class="icon-spotify"></span> Spotify</a>
+  </div>
+</div>
