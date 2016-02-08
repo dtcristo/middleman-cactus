@@ -16,8 +16,6 @@ page '/404.html', directory_index: false
 # Helpers and extensions
 ###
 
-# Time.zone = 'UTC'
-
 activate :blog do |blog|
   blog.permalink = '{title}'
   # Matcher for blog source files
