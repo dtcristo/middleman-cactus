@@ -13,14 +13,14 @@
     <a href="/">
       <img class="avatar" src="/images/avatar.png">
       <div class="details">
-        <div class="dark"><%= site_author %></div>
-        <div class="light"><%= site_subtitle %></div>
+        <div class="dark"><%= config[:site_author] %></div>
+        <div class="light"><%= config[:site_subtitle] %></div>
       </div>
     </a>
     <%= partial 'sharing' %>
   </footer>
 
-  <% if disqus_shortname %>
+  <% if config[:disqus_shortname] %>
     <%= partial 'disqus' %>
   <% end %>
 
