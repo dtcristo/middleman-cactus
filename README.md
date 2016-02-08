@@ -17,6 +17,9 @@ Create a new site from the project template:
 Update the following site configuration settings in `config.rb`:
 
 ```ruby
+###
+# Site settings
+###
 set :site_url, 'http://example.com/'
 set :site_title, 'Site title'
 set :site_subtitle, 'This is the site subtitle'
