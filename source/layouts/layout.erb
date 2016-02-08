@@ -19,13 +19,13 @@
     <section id="wrapper" <% unless current_article %>class="home"<% end %>>
       <%= yield %>
       <footer id="footer">
-        <p class="small">© <%= Time.now.year %> <%= site_author %></p>
+        <p class="small">© <%= Time.now.year %> <%= config[:site_author] %></p>
       </footer>
     </section>
 
     <%= javascript_include_tag 'all' %>
 
-    <% if google_analytics %>
+    <% if config[:google_analytics] %>
       <%= partial 'google_analytics' %>
     <% end %>
   </body>
