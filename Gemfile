@@ -9,14 +9,13 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '~> 4.0'
+gem 'middleman', '~> 4.1'
 gem 'middleman-blog', '~> 4.0'
-gem 'middleman-sprockets', '>= 4.0.0.rc.1'
-gem 'middleman-syntax'
-# gem 'middleman-livereload'
+gem 'middleman-syntax', '~> 2.1'
+# gem 'middleman-livereload', '~> 3.4'
 
 # For feed.xml.builder/sitemap.xml.builder
 gem 'builder', '~> 3.0'
 
 # For markdown
-gem 'redcarpet'
+gem 'redcarpet', '~> 3.3'
