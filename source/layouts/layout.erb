@@ -16,7 +16,7 @@
       </nav>
     <% end %>
 
-    <section id="wrapper" <% unless current_article %>class="home"<% end %>>
+    <section id="wrapper"<% unless current_article %> class="home"<% end %>>
       <%= yield %>
       <footer id="footer">
         <p class="small">© <%= Time.now.year %> <%= config[:site_author] %></p>
