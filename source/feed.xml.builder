@@ -1,7 +1,7 @@
 site_url = config[:site_url]
 site_author = config[:site_author]
 site_updated = Time.parse('2000-01-01 00:00:00')
-blog.articles[0..10].each do |article|
+blog.articles.each do |article|
   article_updated = File.mtime(article.source_file)
   if article_updated > site_updated
     site_updated = article_updated
@@ -19,7 +19,7 @@ xml.feed xmlns: 'http://www.w3.org/2005/Atom' do
   xml.author { xml.name site_author }
   xml.rights "© #{site_author} #{Time.now.year}"
 
-  blog.articles[0..10].each do |article|
+  blog.articles.each do |article|
     xml.entry do
       xml.title article.title
       xml.link href: URI.join(site_url, article.url), rel: 'alternate'
