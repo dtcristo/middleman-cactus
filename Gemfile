@@ -14,6 +14,7 @@ gem 'middleman-blog', '~> 4.0'
 gem 'middleman-syntax', '~> 2.1'
 # gem 'middleman-livereload', '~> 3.4'
 gem 'middleman-vcs-time', '~> 0.0.4'
+gem 'middleman-minify-html', '~> 3.4', '>= 3.4.1'
 
 # For feed.xml.builder/sitemap.xml.builder
 gem 'builder', '~> 3.0'
