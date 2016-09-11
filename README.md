@@ -25,6 +25,8 @@ set :site_title, 'Site title'
 set :site_subtitle, 'This is the site subtitle'
 set :profile_text, %q(Pitchfork kogi forage, gluten-free pour-over drinking vinegar Etsy narwhal next level shabby chic bicycle rights tofu mustache scenester. Intelligentsia Brooklyn mumblecore, church-key meggings cardigan quinoa gluten-free banjo. Polaroid beard 8-bit, lumbersexual photo booth forage bitters mustache drinking vinegar biodiesel cardigan. Four loko raw denim polaroid selfies, mixtape skateboard lumbersexual. Odd Future Blue Bottle bicycle rights Etsy. Etsy Odd Future normcore, deep v Shoreditch seitan sustainable yr heirloom Brooklyn try-hard stumptown Bushwick cornhole. Portland chillwave pug Tumblr deep v readymade.)
 set :site_author, 'Joe Bloggs'
+# Generate your own by running `rake id`
+set :site_id, 'urn:uuid:b8261ce6-4d49-4afa-9d16-643631ab5afc'
 
 # Usernames
 set :github_username, 'example'
@@ -45,5 +47,7 @@ Start the Middleman server:
     $ middleman server
 
 Site should be live at [http://localhost:4567/](http://localhost:4567/).
+
+When adding blog articles, you must include `id` frontmatter. Generate an ID by running `rake id`.
 
 For more information read the [middleman-blog](https://middlemanapp.com/basics/blogging/) documentation.
