@@ -19,7 +19,7 @@
     <section id="wrapper"<% unless current_article %> class="home"<% end %>>
       <%= yield %>
       <footer id="footer">
-        <p class="small">© <%= Time.now.year %> <%= config[:site_author] %></p>
+        <p class="small">© <%= config[:site_author] %> <%= Time.now.year %></p>
       </footer>
     </section>
 
