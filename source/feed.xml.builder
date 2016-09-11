@@ -1,21 +1,32 @@
+site_url = config[:site_url]
+site_author = config[:site_author]
+site_updated = Time.parse('2000-01-01 00:00:00')
+blog.articles[0..10].each do |article|
+  article_updated = File.mtime(article.source_file)
+  if article_updated > site_updated
+    site_updated = article_updated
+  end
+end
+
 xml.instruct!
 xml.feed xmlns: 'http://www.w3.org/2005/Atom' do
   xml.title config[:site_title]
   xml.subtitle config[:site_subtitle]
-  xml.id URI.join(config[:site_url], blog.options.prefix.to_s)
-  xml.link href: URI.join(config[:site_url], blog.options.prefix.to_s)
-  xml.link href: URI.join(config[:site_url], current_page.path), rel: 'self'
-  xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
-  xml.author { xml.name config[:site_author] }
+  xml.link href: URI.join(site_url, current_page.path), rel: 'self'
+  xml.link href: URI.join(site_url, blog.options.prefix.to_s)
+  xml.id config[:site_id]
+  xml.updated site_updated.iso8601
+  xml.author { xml.name site_author }
+  xml.rights "© #{site_author} #{Time.now.year}"
 
-  blog.articles[0..5].each do |article|
+  blog.articles[0..10].each do |article|
     xml.entry do
       xml.title article.title
-      xml.link rel: 'alternate', href: URI.join(config[:site_url], article.url)
-      xml.id URI.join(config[:site_url], article.url)
+      xml.link href: URI.join(site_url, article.url), rel: 'alternate'
+      xml.id article.metadata[:page][:id]
       xml.published article.date.to_time.iso8601
       xml.updated File.mtime(article.source_file).iso8601
-      xml.author { xml.name config[:site_author] }
+      xml.author { xml.name site_author }
       # xml.summary article.summary, type: 'html'
       xml.content article.body, type: 'html'
     end
