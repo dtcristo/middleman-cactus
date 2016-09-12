@@ -85,4 +85,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :minify_html
+
+  # Improve cacheability by using asset hashes in filenames
+  activate :asset_hash
 end
