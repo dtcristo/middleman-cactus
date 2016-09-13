@@ -1,5 +1,5 @@
 <header class="profile">
-  <img class="avatar" src="/images/avatar.png" srcset="/images/avatar@2x.png 2x" alt="Avatar">
+  <img class="avatar" src="<%= url_for "/images/avatar.png" %>" srcset="<%= url_for "/images/avatar@2x.png" %> 2x" alt="Avatar">
   <h1><%= config[:site_title] %></h1>
   <h2><%= config[:site_subtitle] %></h2>
 </header>
