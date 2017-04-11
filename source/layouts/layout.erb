@@ -2,12 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Atom Feed">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<%= url_for "/stylesheets/all.css" %>">
     <title><%= page_title %></title>
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Atom Feed">
+    <link rel="stylesheet" href="<%= url_for '/stylesheets/all.css' %>">
   </head>
   <body>
     <% unless current_page.data.hide_nav %>
