@@ -2,6 +2,10 @@
 
 A port of the default theme from [Cactus](http://cactusformac.com/) for the [Middleman](https://middlemanapp.com/) static site generator. Based on [nickbalestra/kactus](https://github.com/nickbalestra/kactus), a port of the same theme for Jekyll.
 
+![Home](https://raw.github.com/dtcristo/middleman-cactus/master/images/home.png)
+
+![Article](https://raw.github.com/dtcristo/middleman-cactus/master/images/article.png)
+
 ## Installation
 
 Install Middleman:
