@@ -20,4 +20,4 @@ gem 'middleman-minify-html', '~> 3.4', '>= 3.4.1'
 gem 'builder', '~> 3.0'
 
 # For markdown
-gem 'redcarpet', '~> 3.3'
+gem 'redcarpet', '~> 3.5'
