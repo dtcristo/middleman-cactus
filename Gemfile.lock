@@ -23,7 +23,7 @@ GEM
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.0)
-    ffi (1.9.18)
+    ffi (1.15.0)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
