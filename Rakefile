@@ -1,5 +1,5 @@
 require 'securerandom'
 
 task :id do
-  puts "uri:uuid:#{SecureRandom.uuid}"
+  puts "urn:uuid:#{SecureRandom.uuid}"
 end
